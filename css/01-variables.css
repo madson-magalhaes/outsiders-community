@@ -1,0 +1,125 @@
+/* ========================================
+   VARIÁVEIS CSS - Sistema de Design
+======================================== */
+
+/* Fonte Local: Abegnale */
+@font-face {
+    font-family: 'Abegnale';
+    src: url('../assets/fonts/Abegnale.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* === CORES BASE - Outsiders Official === */
+    /* Paleta Estrita - NÃO ALTERAR */
+    --out-orange: #FB6117;
+    --out-sand: #F8E2B7;
+    --out-cream: #F8F0DD;
+    --out-gold: #F5D696;
+    --out-charcoal: #38373C;
+    --out-charcoal-light: #38373C;
+    /* Atualizado para cinza escuro conforme pedido */
+
+    /* === SEMÂNTICA (Mapeamento) === */
+    --bg-primary: var(--out-charcoal);
+    --bg-secondary: var(--out-charcoal-light);
+
+    --text-primary: var(--out-cream);
+    --text-secondary: var(--out-sand);
+    --text-highlight: var(--out-gold);
+    --text-accent: var(--out-orange);
+
+    /* Mapeamento de Legacy (para manter compatibilidade sem quebrar layout) */
+    --deep-black: var(--out-charcoal);
+    --void-black: var(--out-charcoal-light);
+    --dark-purple: var(--out-charcoal);
+    /* Fallback */
+    --cosmic-navy: var(--out-charcoal-light);
+
+    --saturn-gold: var(--out-gold);
+    --mystic-purple: var(--out-orange);
+    /* Substituindo Roxo por Laranja */
+    --ethereal-cyan: var(--out-sand);
+    /* Substituindo Ciano por Areia */
+    --occult-red: #D20000;
+
+    /* === NEUTROS === */
+    --shadow-gray: #121212;
+    --ghost-white: var(--out-cream);
+    --dim-white: var(--out-sand);
+    --glow-white: #FFFFFF;
+
+    /* === TIPOGRAFIA === */
+    --font-display: 'Abegnale', serif;
+    --font-occult: 'Abegnale', serif;
+    --font-body: 'PT Mono', monospace;
+    --font-support: 'Roboto', sans-serif;
+    --font-mono: 'PT Mono', monospace;
+
+    /* === TAMANHOS DE FONTE === */
+    --fs-hero: clamp(2.5rem, 6vw, 5rem);
+    --fs-h1: clamp(2rem, 4vw, 3.5rem);
+    --fs-h2: clamp(1.5rem, 3vw, 2.5rem);
+    --fs-h3: clamp(1.2rem, 2vw, 1.8rem);
+    --fs-body: clamp(1rem, 1.5vw, 1.125rem);
+    --fs-small: clamp(0.875rem, 1.2vw, 1rem);
+
+    /* === ESPAÇAMENTOS === */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    --spacing-xxl: 8rem;
+
+    /* === TRANSIÇÕES === */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-very-slow: 0.8s ease;
+
+    /* === Z-INDEX === */
+    --z-base: 1;
+    --z-overlay: 10;
+    --z-modal: 100;
+    --z-navigation: 1000;
+    --z-particles: -1;
+
+    /* === BREAKPOINTS === */
+    --bp-mobile: 480px;
+    --bp-tablet: 768px;
+    --bp-desktop: 1024px;
+    --bp-wide: 1440px;
+
+    /* === SHADOWS === */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.7);
+
+    /* === GLOWS (Updated to Orange/Gold) === */
+    /* Laranja: 251, 97, 23 */
+    --glow-mystic: 0 0 20px rgba(251, 97, 23, 0.5),
+        0 0 40px rgba(251, 97, 23, 0.3),
+        0 0 60px rgba(251, 97, 23, 0.1);
+
+    /* Gold: 245, 214, 150 (F5D696) */
+    --glow-saturn: 0 0 15px rgba(245, 214, 150, 0.5),
+        0 0 30px rgba(245, 214, 150, 0.3);
+
+    /* Cream/Sand fallback for Cyan glow */
+    --glow-cyan: 0 0 15px rgba(248, 226, 183, 0.5),
+        0 0 30px rgba(248, 226, 183, 0.3);
+
+    /* === BORDERS === */
+    --border-thin: 1px;
+    --border-medium: 2px;
+    --border-thick: 3px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-full: 9999px;
+}

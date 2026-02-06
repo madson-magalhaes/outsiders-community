@@ -1,0 +1,120 @@
+/* ========================================
+   COMPONENTS - Componentes Reutilizáveis
+======================================== */
+
+/* === REVEAL ANIMATION === */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all var(--transition-very-slow);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === GLOW EFFECTS === */
+.mystic-glow {
+    box-shadow: var(--glow-mystic);
+}
+
+.saturn-glow {
+    box-shadow: var(--glow-saturn);
+}
+
+.cyan-glow {
+    box-shadow: var(--glow-cyan);
+}
+
+/* === GRADIENT TEXT === */
+.gradient-text {
+    background: linear-gradient(135deg,
+            var(--out-gold) 0%,
+            var(--out-orange) 50%,
+            var(--out-sand) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* === BACKDROP BLUR === */
+.glass-effect {
+    background: rgba(56, 55, 60, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* === HOVER GLOW BORDER === */
+.hover-glow-border {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+}
+
+.hover-glow-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg,
+            var(--out-orange),
+            var(--out-sand),
+            var(--out-gold),
+            var(--out-orange));
+    border-radius: inherit;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity var(--transition-normal);
+    background-size: 400%;
+    animation: glow-rotate 10s linear infinite;
+}
+
+.hover-glow-border:hover::before {
+    opacity: 0.7;
+}
+
+/* === SHIMMER EFFECT === */
+.shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(248, 226, 183, 0.2),
+            transparent);
+    transition: left var(--transition-slow);
+}
+
+.shimmer:hover::before {
+    left: 100%;
+}
+
+/* === PULSE ANIMATION === */
+.pulse {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* === FLOAT ANIMATION === */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* === LOADING SPINNER === */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(251, 97, 23, 0.2);
+    border-top-color: var(--out-orange);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}

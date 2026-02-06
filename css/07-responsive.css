@@ -1,0 +1,173 @@
+/* ========================================
+   RESPONSIVE - Media Queries
+======================================== */
+
+/* === TABLET (768px e abaixo) === */
+@media (max-width: 768px) {
+    /* Navigation */
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* Hero */
+    .hero-logo {
+        width: clamp(150px, 50vw, 250px);
+    }
+    
+    .hero-headline {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        margin-bottom: 3rem;
+    }
+    
+    /* Image Hover */
+    .image-hover-section {
+        height: 50vh;
+    }
+    
+    .hover-text p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+    
+    /* Copy Section */
+    .copy-body {
+        text-align: left;
+        font-size: 1rem;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .occult-quote {
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Audio */
+    .audio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .audio-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .audio-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .volume-control {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Cards */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .card-3d {
+        height: 350px;
+    }
+    
+    /* CTA */
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-heading {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+    
+    /* Footer */
+    .footer-content {
+        gap: 1.5rem;
+    }
+}
+
+/* === MOBILE (480px e abaixo) === */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0.75rem 5%;
+    }
+    
+    .nav-logo {
+        height: 40px;
+    }
+    
+    .hero-section {
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .copy-container {
+        padding: 0;
+    }
+    
+    .mystic-cta {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+    }
+    
+    .card-3d {
+        height: 300px;
+    }
+    
+    .cta-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-icon {
+        font-size: 3rem;
+    }
+    
+    .cta-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-card p {
+        font-size: 1rem;
+    }
+}
+
+/* === DESKTOP GRANDE (1440px e acima) === */
+@media (min-width: 1440px) {
+    .container,
+    .nav-container,
+    .copy-container,
+    .cards-container,
+    .cta-grid {
+        max-width: 1600px;
+    }
+    
+    .hero-logo {
+        width: 500px;
+    }
+    
+    .card-3d {
+        height: 450px;
+    }
+}
+
+/* === LANDSCAPE MOBILE === */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 150vh;
+    }
+    
+    .image-hover-section {
+        height: 100vh;
+    }
+}
