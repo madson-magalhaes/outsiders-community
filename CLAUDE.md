@@ -433,6 +433,311 @@ Todos os links são configuráveis em `js/config.js` e aplicados automaticamente
 
 ---
 
+## 🚀 DEPLOY E INFRAESTRUTURA
+
+### Status Atual do Projeto ✅
+
+**Repositório GitHub:** https://github.com/madson-magalhaes/outsiders-community
+- ✅ 46 arquivos commitados
+- ✅ Git configurado e sincronizado
+- ✅ Deploy automático ativo
+
+**Site em Produção:** https://outsiders-community.vercel.app
+- ✅ Vercel CLI instalado e autenticado
+- ✅ Deploy automático em cada push
+- ✅ SSL/HTTPS ativo
+- ✅ CDN global ativo
+- ✅ Build time: ~20 segundos
+
+**Conta Vercel:** madsons-projects-8cd6961d (conta gratuita)
+
+---
+
+### Configuração Git Completa
+
+**Repositório já inicializado:**
+```bash
+# Status atual
+Remote: https://github.com/madson-magalhaes/outsiders-community.git
+Branch: main
+Commits: Initial commit (46 arquivos)
+```
+
+**Para futuras alterações:**
+```bash
+# Fazer alterações
+git add .
+git commit -m "Descrição da alteração"
+git push
+
+# Deploy automático acontece em ~20 segundos
+```
+
+---
+
+### GitHub CLI Configurado ✅
+
+**Instalação:**
+```bash
+brew install gh  # Já instalado
+gh auth login    # Já autenticado como @madson-magalhaes
+```
+
+**Comandos úteis:**
+```bash
+gh repo view                    # Ver detalhes do repo
+gh browse                       # Abrir repo no navegador
+gh repo edit --description "..."  # Atualizar descrição
+```
+
+---
+
+### Vercel Deploy Configurado ✅
+
+**Vercel CLI instalado:**
+```bash
+npm install -g vercel  # Já instalado (v50.12.2)
+vercel login          # Já autenticado
+```
+
+**Configuração automática:**
+- Framework: Static Site (detectado automaticamente)
+- Root Directory: `.` (raiz)
+- Output Directory: `.` (raiz)
+- Build Command: Nenhum (site estático)
+
+**Deploy manual (se necessário):**
+```bash
+vercel --prod  # Deploy em produção
+vercel         # Deploy preview
+```
+
+**Monitoramento:**
+```bash
+vercel ls      # Listar deploys
+vercel inspect # Ver logs do último deploy
+```
+
+---
+
+### Configuração de Domínio Customizado (Pendente)
+
+**Domínio oficial:** A ser configurado (comprado no Squarespace)
+
+**Quando configurar o domínio:**
+
+#### PASSO 1: Adicionar domínio no Vercel
+1. Acesse: https://vercel.com/madsons-projects-8cd6961d/outsiders-community/settings/domains
+2. Digite o domínio (ex: `outsiders.community`)
+3. Clique em **"Add"**
+4. Copie os registros DNS fornecidos
+
+#### PASSO 2: Configurar DNS no Squarespace
+1. Acesse: https://account.squarespace.com/domains
+2. Selecione o domínio
+3. **Advanced Settings** → **DNS Settings**
+4. Adicione os registros:
+
+```dns
+Type: A
+Name: @
+Value: 76.76.21.21
+TTL: 3600
+
+Type: CNAME
+Name: www
+Value: cname.vercel-dns.com
+TTL: 3600
+```
+
+#### PASSO 3: Aguardar propagação
+- Tempo: 5min a 48h (geralmente 15-30 min)
+- Verificar: https://dnschecker.org
+
+#### PASSO 4: SSL automático
+- Vercel gera certificado SSL automaticamente
+- HTTPS fica ativo após propagação DNS
+
+**⚠️ IMPORTANTE:** Não delete registros MX (email) ao configurar o domínio!
+
+---
+
+### Fluxo de Trabalho Atual
+
+```
+Alteração Local
+     ↓
+git add . && git commit -m "Update" && git push
+     ↓
+GitHub Repository (atualizado)
+     ↓
+Vercel Deploy Automático (~20s)
+     ↓
+Site Atualizado (https://outsiders-community.vercel.app)
+```
+
+**Quando domínio estiver configurado:**
+```
+git push → GitHub → Vercel → outsiders.community (domínio oficial)
+```
+
+---
+
+### Estrutura de Branches (Recomendação)
+
+**Atual:**
+- `main` - Produção (deploy automático)
+
+**Sugestão para crescimento:**
+```
+main       → Produção (sempre estável)
+staging    → Testes (preview deploy)
+dev        → Desenvolvimento ativo
+```
+
+**Como criar branch staging:**
+```bash
+git checkout -b staging
+git push -u origin staging
+
+# No Vercel: staging branch = preview deploy automático
+```
+
+---
+
+### Logs e Debugging
+
+**Ver logs do Vercel:**
+```bash
+vercel logs outsiders-community --follow
+```
+
+**Dashboard Vercel:**
+- https://vercel.com/madsons-projects-8cd6961d/outsiders-community
+
+**Ver último deploy:**
+- https://vercel.com/madsons-projects-8cd6961d/outsiders-community/deployments
+
+---
+
+### Backup e Rollback
+
+**Rollback para deploy anterior:**
+```bash
+# Via Vercel Dashboard
+1. Acesse: https://vercel.com/.../deployments
+2. Encontre o deploy desejado
+3. Clique "..." → "Promote to Production"
+```
+
+**Via CLI:**
+```bash
+vercel rollback [deployment-url]
+```
+
+**Backup automático:**
+- GitHub = backup do código
+- Vercel = histórico de todos os deploys (infinito)
+
+---
+
+### Monitoramento de Performance (Pendente)
+
+**Para sessões futuras:**
+- [ ] Rodar Lighthouse no domínio de produção
+- [ ] Configurar Google Analytics (opcional)
+- [ ] Monitorar Vercel Analytics (gratuito)
+
+**Comando Lighthouse:**
+```bash
+npm install -g lighthouse
+lighthouse https://outsiders-community.vercel.app --view
+```
+
+---
+
+### Custos Atuais
+
+**GitHub:** Gratuito (repositório público)
+**Vercel:** Gratuito (conta hobby)
+- ✅ Deploy ilimitado
+- ✅ 100 GB bandwidth/mês
+- ✅ SSL automático
+- ✅ CDN global
+
+**Squarespace:** Pago (domínio + workspace)
+- Apenas DNS apontando para Vercel (sem custo extra)
+
+---
+
+### Comandos Rápidos de Referência
+
+```bash
+# Ver status do Git
+git status
+
+# Ver remote configurado
+git remote -v
+
+# Ver últimos commits
+git log --oneline -5
+
+# Ver status Vercel
+vercel --version
+vercel whoami
+vercel ls
+
+# Ver status GitHub CLI
+gh auth status
+gh repo view
+
+# Testar site localmente
+python3 -m http.server 8000
+# Abrir: http://localhost:8000
+```
+
+---
+
+### Troubleshooting
+
+**Deploy falhou:**
+```bash
+# Ver logs detalhados
+vercel logs --follow
+
+# Re-deploy manual
+vercel --prod --force
+```
+
+**Git não está pushando:**
+```bash
+# Verificar remote
+git remote -v
+
+# Re-adicionar remote (se necessário)
+git remote set-url origin https://github.com/madson-magalhaes/outsiders-community.git
+```
+
+**Vercel não está deployando:**
+1. Verificar integração: https://vercel.com/madsons-projects-8cd6961d/outsiders-community/settings/git
+2. Verificar se push foi bem-sucedido no GitHub
+3. Verificar logs no Vercel Dashboard
+
+---
+
+### Próximos Passos (Checklist)
+
+- [x] Git inicializado
+- [x] Repositório GitHub criado
+- [x] Vercel deploy ativo
+- [x] SSL/HTTPS funcionando
+- [ ] Domínio customizado configurado (aguardando domínio oficial)
+- [ ] Lighthouse audit >90
+- [ ] Google Analytics (opcional)
+- [ ] Monitoramento de uptime (opcional)
+
+---
+
 **"A elite se comunica por sinais. Este arquivo é o nosso código." 🔮**
 
-**Versão:** 2.1.0 | **Status:** Implementado ✅ | **Última atualização:** Fev 2026
+**Versão:** 2.1.0 | **Status:** Implementado ✅ | **Deploy:** Ativo 🚀 | **Última atualização:** 05 Fev 2026
