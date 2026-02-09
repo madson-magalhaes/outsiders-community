@@ -161,7 +161,7 @@
 }
 
 .hero-headline {
-    font-family: var(--font-display);
+    font-family: 'Abegnale', serif;
     font-size: var(--fs-hero);
     text-align: center;
     background: linear-gradient(135deg,
@@ -179,7 +179,7 @@
     font-size: var(--fs-h3);
     color: var(--out-sand);
     font-weight: 500;
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
     max-width: 800px;
     margin-inline: auto;
     letter-spacing: 0.05em;
@@ -190,7 +190,7 @@
     font-size: 1.125rem;
     color: var(--ghost-white);
     max-width: 800px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 1rem;
     text-align: center;
     line-height: 1.8;
 }
@@ -200,7 +200,7 @@
 }
 
 .hero-scope {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     padding: 1.5rem;
     background: rgba(56, 55, 60, 0.6);
     border-left: 3px solid var(--out-orange);
@@ -217,7 +217,7 @@
     font-family: var(--font-occult);
     font-size: var(--fs-h2);
     color: var(--out-gold);
-    margin: 4rem 0;
+    margin: 1rem 0;
     font-style: italic;
     text-shadow: 0 0 15px rgba(245, 214, 150, 0.3);
     position: relative;
@@ -354,7 +354,7 @@
 
 /* === COPY SECTION === */
 .mystic-copy-section {
-    padding: var(--spacing-lg) 5%;
+    padding: 1rem 5% 0.5rem;
     background: var(--bg-primary);
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -402,7 +402,7 @@
 .occult-quote {
     border-left: 3px solid var(--out-orange);
     padding-left: 2rem;
-    margin: 3rem 0;
+    margin: 0.75rem 0;
     font-family: var(--font-occult);
     font-style: italic;
     font-size: 1.2rem;
@@ -417,16 +417,17 @@
     font-style: normal;
 }
 
-.emphasis-text {
+.copy-body .emphasis-text {
     text-align: center;
     font-size: 1.2rem;
-    margin-top: 3rem;
+    margin-top: 0.75rem;
     color: var(--ghost-white);
+    margin-bottom: 0;
 }
 
 .mystic-cta {
     display: inline-block;
-    margin-top: 3rem;
+    margin-top: 0.75rem;
     padding: 1.2rem 3rem;
     /* Orange to Red legacy fallback gradient, or Orange to Gold */
     background: linear-gradient(135deg, var(--out-orange), #ff4500);
@@ -473,7 +474,7 @@
 
 /* === CARDS SECTION === */
 .cards-section {
-    padding: var(--spacing-xxl) 5% var(--spacing-md);
+    padding: 1.5rem 5% 1.5rem;
     background: var(--bg-secondary);
 }
 
@@ -484,9 +485,15 @@
 
 .section-title {
     text-align: center;
-    font-family: var(--font-display);
-    color: var(--out-gold);
-    margin-bottom: 4rem;
+    font-family: 'Abegnale', serif;
+    background: linear-gradient(135deg,
+            var(--out-gold) 0%,
+            var(--out-orange) 50%,
+            var(--out-sand) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
     font-size: var(--fs-h1);
 }
 
@@ -511,7 +518,7 @@
 /* === COMMUNITY TEXT BLOCK (New) === */
 .community-text-block {
     max-width: 900px;
-    margin: 0 auto 5rem;
+    margin: 0 auto 1.25rem;
     text-align: center;
     font-size: 1.125rem;
     line-height: 1.8;
