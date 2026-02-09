@@ -718,10 +718,27 @@ git remote -v
 git remote set-url origin https://github.com/madson-magalhaes/outsiders-community.git
 ```
 
-**Vercel não está deployando:**
-1. Verificar integração: https://vercel.com/madsons-projects-8cd6961d/outsiders-community/settings/git
-2. Verificar se push foi bem-sucedido no GitHub
-3. Verificar logs no Vercel Dashboard
+**Vercel não está deployando automaticamente:**
+
+**PROBLEMA COMUM:** Integração GitHub-Vercel desconectada
+
+**SOLUÇÃO:**
+1. Acesse: https://vercel.com/madsons-projects-8cd6961d/outsiders-community/settings/git
+2. Clique em **"Connect Git Repository"**
+3. Selecione **GitHub** e autorize
+4. Selecione o repositório: `madson-magalhaes/outsiders-community`
+5. Configure:
+   - Production Branch: `main`
+   - Deploy on push: ✅ Ativado
+
+**Deploy manual temporário:**
+```bash
+vercel --prod  # Até integração ser configurada
+```
+
+**Após configurar integração:**
+- ✅ `git push` dispara deploy automático em ~20-30s
+- ✅ Webhook GitHub → Vercel funciona
 
 ---
 
@@ -731,6 +748,7 @@ git remote set-url origin https://github.com/madson-magalhaes/outsiders-communit
 - [x] Repositório GitHub criado
 - [x] Vercel deploy ativo
 - [x] SSL/HTTPS funcionando
+- [x] Integração GitHub-Vercel configurada (deploy automático)
 - [ ] Domínio customizado configurado (aguardando domínio oficial)
 - [ ] Lighthouse audit >90
 - [ ] Google Analytics (opcional)
@@ -738,6 +756,61 @@ git remote set-url origin https://github.com/madson-magalhaes/outsiders-communit
 
 ---
 
+## 📝 CHANGELOG (Histórico de Alterações)
+
+### v2.1.1 (09 Fev 2026)
+
+**Ajustes de Espaçamento:**
+- ✅ Ajustado padding da `.cards-section` para `1.5rem 5% 1.5rem` (24px simétrico)
+- 📍 Localização: `css/05-sections.css:477`
+- 🎯 Objetivo: Melhorar espaçamento entre frame 3 (manifesto) e seção de cards
+- ⚠️ Nota: Valores testados (1rem, 1.5rem, 2rem) - ajuste fino em andamento
+
+**Infraestrutura:**
+- ✅ Configurada integração GitHub-Vercel para deploy automático
+- ✅ Webhook GitHub → Vercel ativo
+- ✅ Deploy automático funcional (~20-30s após push)
+- 📦 Commit: `bbc7eb2` - "fix: Adjust cards section padding to 1.5rem for better spacing"
+
+**Melhorias:**
+- 📚 Documentação expandida em `CLAUDE.md` (seção troubleshooting)
+- 🔧 Adicionadas instruções para configurar integração GitHub-Vercel
+- ✅ Checklist de deploy atualizado
+
+---
+
+### v2.1.0 (05 Fev 2026)
+
+**Lançamento inicial:**
+- ✅ Site completo implementado
+- ✅ Deploy Vercel configurado
+- ✅ Repositório GitHub criado
+- ✅ 46 arquivos commitados
+
+---
+
+## 🔧 NOTAS TÉCNICAS DE MANUTENÇÃO
+
+### Ajustes de Espaçamento Cards Section
+
+**Valores testados:**
+- `2rem` (32px) - Original, considerado muito espaçado
+- `1.5rem` (24px) - Atual, meio termo
+- `1rem` (16px) - Testado, considerado muito compacto
+
+**Para ajustar no futuro:**
+```css
+/* css/05-sections.css:477 */
+.cards-section {
+    padding: [VALOR]rem 5% [VALOR]rem;  /* top, laterais, bottom */
+    background: var(--bg-secondary);
+}
+```
+
+**Recomendação:** Testar em produção e definir valor final entre 1rem e 2rem.
+
+---
+
 **"A elite se comunica por sinais. Este arquivo é o nosso código." 🔮**
 
-**Versão:** 2.1.0 | **Status:** Implementado ✅ | **Deploy:** Ativo 🚀 | **Última atualização:** 05 Fev 2026
+**Versão:** 2.1.1 | **Status:** Implementado ✅ | **Deploy:** Ativo 🚀 | **Última atualização:** 09 Fev 2026
