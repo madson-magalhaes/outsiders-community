@@ -162,6 +162,7 @@
 
 .hero-headline {
     font-family: 'Abegnale', serif;
+    font-weight: normal;
     font-size: var(--fs-hero);
     text-align: center;
     background: linear-gradient(135deg,
@@ -486,13 +487,8 @@
 .section-title {
     text-align: center;
     font-family: 'Abegnale', serif;
-    background: linear-gradient(135deg,
-            var(--out-gold) 0%,
-            var(--out-orange) 50%,
-            var(--out-sand) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--out-gold);
+    font-weight: normal;
     margin-bottom: 1rem;
     font-size: var(--fs-h1);
 }
