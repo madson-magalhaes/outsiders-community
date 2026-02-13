@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Outsiders Community - Sobre Nós. A ordem de mentes rebeldes que recusaram o roteiro convencional.">
+    <meta name="keywords" content="Outsiders Community, Sobre Nós, Bitcoin, Cripto, Outsider Papini">
+    <meta name="author" content="Outsiders Community">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://outsiders.community/sobre.html">
+    <meta property="og:title" content="Sobre Nós | Outsiders Community">
+    <meta property="og:description" content="Conheça a Outsiders Community.">
+    <meta property="og:image" content="./assets/images/logo/outsiders.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://outsiders.community/sobre.html">
+    <meta property="twitter:title" content="Sobre Nós | Outsiders Community">
+    <meta property="twitter:description" content="Conheça a Outsiders Community.">
+    <meta property="twitter:image" content="./assets/images/logo/outsiders.png">
+
+    <title>Sobre Nós | Outsiders Community</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/logo/outsiders.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        /* Specific styles for Sobre page */
+        .sobre-section {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            box-shadow: var(--glow-mystic);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--mystic-purple);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--glow-white);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
+    <nav class="navbar-mystic" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="./assets/images/logo/logo.png" alt="Outsiders Community" class="nav-logo">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links desktop-nav">
+                <li><a href="#comunidade" class="nav-link">Comunidade</a></li>
+                <li><a href="consultoria.html" class="nav-link">Consultoria</a></li>
+                <li><a href="#outstore" class="nav-link">OutStore</a></li>
+                <li><a href="newsletter.html" class="nav-link">Newsletter</a></li>
+                <li><a href="sobre.html" class="nav-link active">Sobre Nós</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-links">
+                <li><a href="#comunidade" class="mobile-nav-link">Comunidade</a></li>
+                <li><a href="consultoria.html" class="mobile-nav-link">Consultoria</a></li>
+                <li><a href="#outstore" class="mobile-nav-link">OutStore</a></li>
+                <li><a href="newsletter.html" class="mobile-nav-link">Newsletter</a></li>
+                <li><a href="sobre.html" class="mobile-nav-link active">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         SOBRE SECTION - Video
+    ========================================= -->
+    <section class="sobre-section">
+        <div class="container reveal">
+            <h1 class="page-title gradient-text">Sobre Nós</h1>
+
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/M3Lk9Ntkuh8?si=Yo5xUlY-QS_p13Ux"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#join" class="btn btn-primary">Participar da Comunidade</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./assets/images/logo/logo.png" alt="Outsiders Community">
+            </div>
+
+            <div class="footer-text">
+                <p class="footer-tagline">A comunidade que vai além da WEB3</p>
+                <p class="footer-copyright">&copy; 2025 Outsiders Community. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/config.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/animations.js"></script>
+    <!-- Removed particles/spotlight for simpler page or keep if desired, keeping simple for now but loading scripts to avoid errors if they are global -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

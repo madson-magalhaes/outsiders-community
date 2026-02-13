@@ -50,14 +50,21 @@ class OutsidersWebsite {
 
         Object.entries(linkMap).forEach(([selector, configKey]) => {
             const url = CONFIG.LINKS[configKey];
-            if (url) {
-                document.querySelectorAll(selector).forEach(el => {
+            document.querySelectorAll(selector).forEach(el => {
+                if (url) {
                     el.href = url;
                     el.target = "_blank"; // Abrir em nova aba
                     el.rel = "noopener noreferrer"; // Segurança
                     devLog(`Updated link: ${selector} -> ${url}`);
-                });
-            }
+                } else {
+                    // Link desativado / Em breve
+                    el.href = "javascript:void(0)";
+                    el.removeAttribute('target');
+                    el.classList.add('disabled-nav-link');
+                    el.setAttribute('data-tooltip', 'EM BREVE');
+                    devLog(`Disabled link: ${selector}`);
+                }
+            });
         });
 
         // Handle generic external links

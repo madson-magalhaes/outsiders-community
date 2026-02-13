@@ -115,3 +115,77 @@ a:hover {
     background: var(--mystic-purple);
     color: var(--glow-white);
 }
+
+/* ========================================
+   DISABLED LINKS & TOOLTIPS
+======================================== */
+.disabled-nav-link {
+    cursor: default;
+    /* Changed from not-allowed to default */
+    opacity: 0.5;
+    position: relative;
+    pointer-events: auto;
+    /* Ensure hover works */
+}
+
+.disabled-nav-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    /* Position below */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    background: var(--mystic-purple);
+    /* More prominent background */
+    color: var(--glow-white);
+    border: 1px solid var(--saturn-gold);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+
+    font-family: var(--font-display);
+    /* Use display font for impact */
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(107, 70, 193, 0.4);
+    /* Glow effect */
+    z-index: 1000;
+}
+
+/* Arrow for the tooltip */
+.disabled-nav-link::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent var(--mystic-purple) transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.disabled-nav-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.disabled-nav-link:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-2px);
+    /* Adjust for bottom arrow */
+}

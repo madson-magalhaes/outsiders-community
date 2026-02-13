@@ -3,18 +3,13 @@
 ======================================== */
 
 /* === NAVIGATION === */
-/* ========================================
-   SECTIONS - Estilos por Seção
-======================================== */
-
-/* === NAVIGATION === */
 .navbar-mystic {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(56, 55, 60, 0.95);
-    /* Charcoal w/ opacity */
+    background: rgba(10, 10, 10, 0.95) !important;
+    /* Hero/Scrolled state color forced */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(251, 97, 23, 0.2);
     /* Orange border low opacity */

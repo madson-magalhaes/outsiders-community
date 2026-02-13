@@ -39,9 +39,9 @@ const CONFIG = {
     // LINKS EXTERNOS (Editado pelo usuário)
     LINKS: {
         comunidade: "https://lastlink.com/p/C7032E138?cp=SEGUIDOROUTSX", // Link para "Comunidade"
-        consultoria: "https://x.com/outsiderpapini", // Link para "Consultoria"
+        consultoria: "", // Link para "Consultoria" (EM BREVE)
         outstore: "https://cryptoshirts.io/collections/outsiders",     // Link para "OutStore"
-        newsletter: "https://x.com/outsiderpapini", // Link para "Newsletter"
+        newsletter: "", // Link para "Newsletter" (EM BREVE)
         join: "https://lastlink.com/p/C7032E138?cp=SEGUIDOROUTSX",       // Botão "Entrar na Ordem"
 
         telegram: "https://t.me/outsiderscommunity",
